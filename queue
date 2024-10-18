@@ -1,0 +1,39 @@
+#include <iostream>
+// Thư viện
+#include <queue>
+using namespace std;
+// Cách khai báo: queue (kiểu dữ liệu) (tên queue);
+queue<int> q;
+int main(){
+  // Thêm các phân tử vào queue
+  q.push(10);
+  q.push(20);
+  q.push(30);
+  // Lúc này, queue là [18, 20, 30]
+  // In ra kích thước của queue
+  cout << "Kich thuoc cua queue la: <<< q.size() << endl;
+  // In ra phần tử đầu tiên trong queue
+  cout << "Phan tu dau tien trong queue la: <<< q.front() << endl;
+  // Loại bỏ phần tử đầu tiên ra khỏi queue
+  cout << "Loai bo phan tu dau trong queue" << endl;
+  q.pop();
+  // Lúc này, queue là [20, 30]
+  cout << "Kich thuoc cua queue sau khi xoa la: << q.size() << endl;
+  // Kiểm tra queue có rồng hay không
+  if(q.empty()) cout << "Queue dang trong" << endl;
+  else{
+    cout << "Queue khong rong" << endl;
+    // In ra phần từ đầu tiên trong queue
+    cout << "Phan tu dau tien trong queue la: " << q.front() << endl;
+    // In ra kich thước của queue
+    cout << "Kich thuoc cua queue la: <<<< q.size() << endl;
+  }
+}
+
+/*Kich thuoc cua queue la: 3
+Phan tu dau tien trong queue la: 10
+Loai bo phan tu dau trong queue
+Kich thuoc cua queue sau khi xoa la: 2
+Queue khong rong
+Phan tu dau tien trong queue la: 20
+Kich thuoc cua queue la: 2 /*
