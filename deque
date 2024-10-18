@@ -1,0 +1,41 @@
+#include <iostream>
+#include <deque> // Thêm thư viện
+using namespace std;
+deque<int> dq; // Khai báo deque (kiểu dữ liệu) (tên deque);
+int main(){
+  dq.push_back(10); // Thêm 10 vào cuối deque
+  dq.push_back(20); // Thêm 10 vào cuối deque
+  // Lúc này deque là [10, 20] 
+  dq.push_front(4); // Thêm 4 vào đầu deque
+  // Lúc này deque là [4, 10, 20]
+  dq.push_front(2); // Thêm 2 vào đầu deque
+  // Lúc này deque là [2, 4, 10, 20]
+
+  cout << "Kich thuoc cua deque la: << dq.size() << endl;
+  cout << "Phan tu dau tien trong deque la: " << dq.front() << endl;
+  cout << "Phan tu cuoi cung trong deque la:" << dq.back() << endl; 
+    
+  cout << "Xoa bo phan tu dau deque" << endl; 
+  dq.pop_front(); 
+  // Lúc này deque là [4, 18, 20]
+  cout << "Kich thuoc cua deque la: " <<< dq.size() << endl;
+  cout << "Phan tu dau tien trong deque la: cout << "Phan tu cuoi cung trong deque la: << dq.front() << endl; <<< dq.back() << endl;
+  cout << "Xoa bo phan tu cuoi deque" << endl;
+  dq.pop_back();
+  // Lúc này deque là [4, 10]
+  cout << "Kich thuoc cua deque la: << dq.size() << endl; "
+  cout << "Phan tu dau tien trong deque la: "<< dq.front() << endl;
+  cout << "Phan tu cuoi cung trong deque la: " << dq.back() << endl;
+}  
+
+/*Kich thuoc cua deque la: 4
+Phan tu dau tien trong deque la: 2
+Phan tu cuoi cung trong deque la: 20
+Xoa bo phan tu dau deque
+Kich thuoc cua deque la: 3
+Phan tu dau tien trong deque la: 4
+Phan tu cuoi cung trong deque la: 20
+Xoa bo phan tu cuoi deque
+Kich thuoc cua deque la: 2
+Phan tu dau tien trong deque la: 4
+Phan tu cuoi cung trong deque la: 10 */
